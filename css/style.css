@@ -1,0 +1,116 @@
+/* --- VARIABLES DE DESIGN --- */
+:root {
+    --neon-red: white;
+    --neon-yellow: #DBFF00;
+    --bg-paper: #F2F0EB;
+    --black: #1A1A1A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lilex', monospace; /* Utilisation de la police demandée */
+    background-color: var(--black);
+    overflow-y: hidden; /* Désactivation du scroll vertical */
+    overflow-x: auto;   /* Activation du scroll horizontal */
+    cursor: crosshair;
+}
+
+#menu-tag {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background: white;
+    padding: 20px;
+    border: 0.5px solid var(--black);
+    z-index: 1000;
+    transform: rotate(-1.5deg);
+    min-width: 220px;
+    mix-blend-mode:lighten;
+}
+
+.menu-header {
+    font-size: 1 rem;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-weight: 300;
+}
+
+#menu-tag ul { list-style: none; }
+#menu-tag a { 
+    text-decoration: none; 
+    color: var(--black); 
+    font-size: 0.8rem; 
+    font-weight: 100;
+    display: block;
+    margin-bottom: 5px;
+}
+#menu-tag a:hover { font-weight:700;color:#ff4500;}
+
+.horizontal-wrapper {
+    display: flex;
+    width: fit-content;
+}
+
+section {
+    width: 100vw; 
+    height: 100vh;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 10vw;
+    padding-left:300px;
+}
+
+.section-intro { background-color: var(--bg-paper); }
+.section-milano { background-color: var(--neon-yellow); }
+.section-sabor { background-color: #ff4500; }
+.section-kimphat { background-color:  #FF6EC7; }
+.section-amira { background-color: #00BFFF; }
+
+h1{
+    font-size: 8vw;
+    color:#000;
+    text-transform: uppercase;
+    line-height: 1.5    ;
+    z-index: 10;
+    pointer-events: none;
+    font-weight: 100;
+}
+
+.epicerie-title {
+    font-size:5vw;
+       color:#000;
+    text-transform: uppercase;
+    line-height: 0.85;
+    z-index: 10;
+    pointer-events: none;
+    font-weight: 100;
+}
+
+.section-sabor .epicerie-title { color:#000; }
+
+
+
+
+
+.dot {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background:#ff4500;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.img-wrap img {
+    width: 200%;
+    display: block;
+    mix-blend-mode: multiply;
+}
